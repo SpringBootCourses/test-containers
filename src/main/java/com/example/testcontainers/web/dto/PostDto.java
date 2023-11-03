@@ -33,4 +33,9 @@ public class PostDto {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private long viewsAmount;
 
+    public PostDto(String title, String text) {
+        this.title = title;
+        this.text = text;
+    }
+
 }
