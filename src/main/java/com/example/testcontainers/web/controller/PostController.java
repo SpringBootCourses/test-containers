@@ -29,6 +29,7 @@ public class PostController {
     private final PostMapper postMapper;
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public PostDto create(@Valid @RequestBody PostDto dto) {
         Post post = postMapper.toEntity(dto);
         post = postService.create(post);

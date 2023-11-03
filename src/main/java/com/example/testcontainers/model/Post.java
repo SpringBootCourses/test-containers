@@ -7,12 +7,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Table(name = "posts")
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 public class Post {
 
     @Id
@@ -26,5 +28,10 @@ public class Post {
     private String text;
 
     private long viewsAmount;
+
+    public Post(String title, String text) {
+        this.title = title;
+        this.text = text;
+    }
 
 }
