@@ -1,5 +1,7 @@
 # Test containers
 
+[![codecov](https://codecov.io/gh/IlyaLisov/test-containers/graph/badge.svg?token=2TB4I260W6)](https://codecov.io/gh/IlyaLisov/test-containers)
+
 Testcontainers tests of Spring Boot application.
 
 This application is a simple post service, that allows to create, get and delete
