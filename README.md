@@ -21,4 +21,3 @@ You need to provide next variables in `.env` file.
 ### Run
 
 To run this application you need to run `docker compose up`.
-

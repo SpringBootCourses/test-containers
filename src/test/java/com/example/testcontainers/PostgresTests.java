@@ -6,8 +6,6 @@ import com.example.testcontainers.web.dto.PostDto;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +16,12 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.springframework.http.HttpStatus;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
 import java.util.List;
 
+@Testcontainers
 @TestConfiguration(proxyBeanMethods = false)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostgresTests {
@@ -31,27 +31,17 @@ public class PostgresTests {
 
     @Container
     @ServiceConnection
-    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
+    private static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
             DockerImageName.parse("postgres:15.1-alpine")
     );
 
     @Autowired
     PostRepository postRepository;
 
-    @BeforeAll
-    static void beforeAll() {
-        postgres.start();
-    }
-
     @BeforeEach
     void setUp() {
         RestAssured.baseURI = "http://localhost:" + port;
         postRepository.deleteAll();
-    }
-
-    @AfterAll
-    static void afterAll() {
-        postgres.stop();
     }
 
     @Test
