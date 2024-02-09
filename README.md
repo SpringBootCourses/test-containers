@@ -18,6 +18,8 @@ You need to provide next variables in `.env` file.
 * `POSTGRES_USERNAME` - username of user
 * `POSTGRES_PASSWORD` - password of user
 
+You can use example `.env.example` file with some predefined environments.
+
 ### Run
 
 To run this application you need to run `docker compose up`.
