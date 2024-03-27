@@ -13,14 +13,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.0-SNAPSHOT</version>
+        <version>3.2.4</version>
         <relativePath/>
     </parent>
 
     <properties>
 		<java.version>17</java.version>
-        <postgresql.version>42.7.1</postgresql.version>
-        <lombok.version>1.18.30</lombok.version>
+        <postgresql.version>42.7.3</postgresql.version>
+        <lombok.version>1.18.32</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <rest-assured.version>5.4.0</rest-assured.version>
         <jacoco.version>0.8.11</jacoco.version>
@@ -105,7 +105,7 @@
             <dependency>
                 <groupId>org.testcontainers</groupId>
                 <artifactId>testcontainers-bom</artifactId>
-                <version>1.19.5</version>
+                <version>1.19.7</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
