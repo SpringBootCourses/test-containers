@@ -1,6 +1,6 @@
 # Test containers
 
-[![codecov](https://codecov.io/gh/IlyaLisov/test-containers/graph/badge.svg?token=2TB4I260W6)](https://codecov.io/gh/IlyaLisov/test-containers)
+[![codecov](https://codecov.io/gh/IlyaLisov/test-containers/graph/badge.svg?token=2TB4I260W6)](https://codecov.io/gh/SpringBootCourses/test-containers)
 
 Testcontainers tests of Spring Boot application.
 
