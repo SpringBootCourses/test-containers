@@ -22,7 +22,7 @@
         <postgresql.version>42.7.3</postgresql.version>
         <lombok.version>1.18.32</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <rest-assured.version>5.4.0</rest-assured.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
         <jacoco.version>0.8.12</jacoco.version>
 	</properties>
 
